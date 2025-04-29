@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your online coffee store. Enjoy the finest coffee from around the world.">
+  <meta name="keywords" content="coffee, online store, arabic coffee, turkish coffee">
+  <meta name="author" content="Your Name">
+  <title>Caffeine Haven</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="images/caffeine_haven_logo.png" alt="Caffeine Haven Logo" class="logo">
+        <h1>Caffeine Haven</h1>
+      </div>
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Caffeine Haven</h2>
+    <p>Discover the finest coffee blends crafted with love and passion.</p>
+    <video controls>
+      <source src="Video/Video coffee shop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <audio controls>
+        <source src="audio/coffee-jaz.mp3" type="audio/mpeg">
+        <source src="audio/coffee-jaz.mp3" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="columns">
+      <!-- Coffee Items -->
+      <figure>
+        <img src="images/Espresso_pic.jpg" alt="Espresso">
+        <figcaption>Espresso - 1.3 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/cappuccino_pic.jpg" alt="Cappuccino">
+        <figcaption>Cappuccino - 2 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/latte_pic.jpg" alt="Latte">
+        <figcaption>Latte - 2 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Americano_pic.jpg" alt="Americano">
+        <figcaption>Americano - 1.8 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Mocha_pic.jpg" alt="Mocha">
+        <figcaption>Mocha - 2 BD </figcaption>
+      </figure>
+      <figure>
+        <img src="images/Macchiato_pic.jpg" alt="Macchiato">
+        <figcaption>Macchiato - 1.5 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/flat_white_pic.jpg" alt="Flat White">
+        <figcaption>Flat White - 1.8 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/iced_coffee_pic.jpg" alt="Iced Coffee">
+        <figcaption>Iced Coffee - 1.8 BD</figcaption>
+      </figure>
+      <figure>
+        <img src="images/Turkish_coffee_pic.jpg" alt="Turkish Coffee">
+        <figcaption>Turkish Coffee - 1.5 BD</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <details>
+      <summary>Our Story</summary>
+      <p>
+        We started in 2023 with a mission to bring the best coffee experience to your home. Our journey began with a simple idea: to create a space where coffee lovers can enjoy premium, sustainably sourced coffee blends. Every bean we use is carefully selected from sustainable farms around the world, ensuring the highest quality and ethical practices.
+      </p>
+      <p>
+        At Caffeine Haven, we believe that coffee is more than just a drink—it's a way of life. That's why we roast our beans to perfection, bringing out the rich flavors and aromas that make every cup unforgettable. Whether you're a fan of bold espressos or creamy lattes, we have something for everyone.
+      </p>
+    </details>
+
+    <details>
+      <summary>Our Values</summary>
+      <p>
+        Sustainability and quality are at the heart of everything we do. We partner with farmers who share our commitment to ethical practices and environmental responsibility. By choosing Caffeine Haven, you're not just enjoying great coffee—you're supporting a better future for our planet.
+      </p>
+    </details>
+
+    <details>
+      <summary>Our Team</summary>
+      <p>
+        Our team is made up of passionate coffee enthusiasts who are dedicated to delivering the best experience to our customers. From our expert roasters to our friendly baristas, everyone at Caffeine Haven is here to make your coffee journey special.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why Choose Us?</summary>
+      <p>
+        We stand out because of our commitment to quality, sustainability, and customer satisfaction. Every cup of coffee you enjoy from us is a testament to our dedication to excellence. Join us in celebrating the art of coffee!
+      </p>
+    </details>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <span class="error" id="name-error"></span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="email-error"></span>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz">
+    <h2>Test Your Coffee Knowledge</h2>
+    <p>What is the main ingredient in a cappuccino?</p>
+    <input type="text" id="quiz-answer">
+    <button onclick="checkQuiz()">Submit Answer</button>
+    <p id="quiz-result"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Caffeine Haven. All rights reserved.</p>
+    <p>Follow us on social media: 
+      <a href="#" target="_blank">Facebook</a> | 
+      <a href="#" target="_blank">Instagram</a> | 
+      <a href="#" target="_blank">X</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
